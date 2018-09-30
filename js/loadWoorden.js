@@ -9,14 +9,14 @@ function loadJSON(url) {
 function filterFromTo(list, from, to) {
     let passed = false;
     let before = true;
-    return list.filter(woord => {
+    return list.filter((woord, i) => {
         if (passed && before) {
-            if (woord.nom == to) {
+            if (i == to) {
                 before = false;
             }
             return true
         } else {
-            if (woord.nom == from) {
+            if (i == from) {
                 passed = true;
                 return true;
             }
@@ -36,6 +36,6 @@ function mapToType(list) {
 
 export default function loadWoorden(from, to) {
     return loadJSON('./woorden/woordjesLatijn.json')
-        .then(woorden => filterFromTo(woorden, from, to))
+        .then(woorden => filterFromTo(woorden, from || 0, to || woorden.length))
         .then(woorden => mapToType(woorden));
 }

@@ -1,12 +1,14 @@
 import loadWoorden from './loadWoorden.js';
 
+let app;
 
-const app = loadWoorden('donum', 'imperium')
+loadWoorden()
     .then(woorden => {
-        return new Vue({
+        app = new Vue({
             el: '.container',
             data: {
                 woorden
             }
         });
+        window.app = app;
     });
