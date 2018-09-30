@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Latijn voc</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Latijn Voc.</h1>
+        <div class="woorden">
+            <div id="woord" v-for="woord in woorden" v-html="woord.display()"></div>
+        </div>
+    </div>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
