@@ -20,7 +20,7 @@ export default class Subs extends Woord {
         div.className = 'woordForm';
         div.innerHTML = `<span>${this.nom}, </span>
         <input type="text" name=${this.gen}>
-        <input type="text" name=${this.vert[0]}
+        <input type="text" name=${this.vert[0]}>
         <input type="radio" name=${this.nom}> m
         <input type="radio" name=${this.nom}> v
         <input type="radio" name=${this.nom}> 0`;
