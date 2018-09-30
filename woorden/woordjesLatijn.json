@@ -1,4 +1,5 @@
-[{ "nom": "ala", "gen": "alae", "geslacht": "v", "vert": ["vleugel"], "type": "subs" },
+[
+    { "nom": "ala", "gen": "alae", "geslacht": "v", "vert": ["vleugel"], "type": "subs" },
     { "nom": "anima", "gen": "animae", "geslacht": "v", "vert": ["adem", "ziel"], "type": "subs" },
     { "nom": "aqua", "gen": "aquae", "geslacht": "v", "vert": ["water"], "type": "subs" },
     { "nom": "avaritia", "gen": "avaritiae", "geslacht": "v", "vert": ["hebzucht", "gierigheid"], "type": "subs" },
@@ -199,5 +200,25 @@
     { "nom": "os1", "gen": "oris", "geslacht": "o", "vert": ["mond", "muil", "bek", "gezicht", "gelaat"], "type": "subs" },
     { "nom": "os2", "gen": "ossis", "geslacht": "o", "vert": ["been", "bot"], "type": "subs" },
     { "nom": "pecus", "gen": "pecoris", "geslacht": "o", "vert": ["vee"], "type": "subs" },
-    { "nom": "tempus", "gen": "temporis", "geslacht": "o", "vert": ["tijd", "tijdstip"], "type": "subs" }
+    { "nom": "tempus", "gen": "temporis", "geslacht": "o", "vert": ["tijd", "tijdstip"], "type": "subs" },
+    { "nom": "aestus", "gen": "aestus", "geslacht": "m", "vert": ["hitte", "gloed", "golf", "vloed"], "type": "subs" },
+    { "nom": "casus", "gen": "casus", "geslacht": "m", "vert": ["val", "toeval", "voorval", "ongeval", "ongeluk"], "type": "subs" },
+    { "nom": "cursus", "gen": "cursus", "geslacht": "m", "vert": ["wedloop", "loop", "wedren", "ren", "vaart", "loopbaan", "carrière"], "type": "subs" },
+    { "nom": "domus", "gen": "domus", "geslacht": "v", "vert": ["huis"], "type": "subs" },
+    { "nom": "equitatus", "gen": "equitatus", "geslacht": "m", "vert": ["ruiterij"], "type": "subs" },
+    { "nom": "exercitus", "gen": "exercitus", "geslacht": "m", "vert": ["leger"], "type": "subs" },
+    { "nom": "fluctus", "gen": "fluctus", "geslacht": "m", "vert": ["golf", "vloed"], "type": "subs" },
+    { "nom": "gemitus", "gen": "gemitus", "geslacht": "m", "vert": ["gezucht", "geklaag", "gejammer"], "type": "subs" },
+    { "nom": "impetus", "gen": "impetus", "geslacht": "m", "vert": ["aanval"], "type": "subs" },
+    { "nom": "manus", "gen": "manus", "geslacht": "v", "vert": ["hand", "geroep", "bende", "gezag", "macht"], "type": "subs" },
+    { "nom": "motus", "gen": "motus", "geslacht": "m", "vert": ["beweging"], "type": "subs" },
+    { "nom": "usus", "gen": "usus", "geslacht": "m", "vert": ["gebruik", "praktijk", "bruikbaarheid", "nut", "voordeel"], "type": "subs" },
+    { "nom": "vultus", "gen": "vultus", "geslacht": "m", "vert": ["gezicht", "gelaatsuitdrukking", "gelaat"], "type": "subs" },
+    { "nom": "cornu", "gen": "cornus", "geslacht": "o", "vert": ["hoorn", "vleugel van een leger"], "type": "subs" },
+    { "nom": "dies", "gen": "diei", "geslacht": "m", "vert": ["dag"], "type": "subs" },
+    { "nom": "facies", "gen": "faciei", "geslacht": "v", "vert": ["uiterlijk", "voorkomen", "gedaante", "gezicht", "gelaat"], "type": "subs" },
+    { "nom": "fides", "gen": "fidei", "geslacht": "v", "vert": ["vertrouwen", "trouw", "eerlijkheid"], "type": "subs" },
+    { "nom": "res", "gen": "rei", "geslacht": "v", "vert": ["zaak", "ding", "voorwerp", "aangelegenheid"], "type": "subs" },
+    { "nom": "res publica", "gen": "rei publicae", "geslacht": "v", "vert": ["aanblik", "uiterlijk", "voorkomen"], "type": "subs" },
+    { "nom": "spes", "gen": "spei", "geslacht": "v", "vert": ["hoop", "verwachting"], "type": "subs" }
 ]

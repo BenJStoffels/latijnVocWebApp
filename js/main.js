@@ -2,7 +2,7 @@ import loadWoorden from './loadWoorden.js';
 
 let app;
 
-loadWoorden()
+loadWoorden(201)
     .then(woorden => {
         app = new Vue({
             el: '.container',
