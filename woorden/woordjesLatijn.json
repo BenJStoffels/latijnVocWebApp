@@ -179,5 +179,7 @@
     { "nom": "virgo", "gen": "virginis", "geslacht": "v", "vert": ["maagd", "meisje"], "type": "subs" },
     { "nom": "virtus", "gen": "virtutis", "geslacht": "v", "vert": ["dapperheid", "moed", "voortreffelijkheid", "deugdzaamheid"], "type": "subs" },
     { "nom": "vis", "gen": "acc. vim abl. vi", "geslacht": "v", "vert": ["kracht", "sterkte", "gewelddaad", "daad"], "type": "subs" },
-    { "nom": "vox", "gen": "vocis", "geslacht": "v", "vert": ["stem"], "type": "subs" }
+    { "nom": "vox", "gen": "vocis", "geslacht": "v", "vert": ["stem"], "type": "subs" },
+    { "nom": "agmen", "gen": "agminis", "geslacht": "o", "type": "subs", "vert": ["troep", "menigte", "leger op mars", " colonne"] },
+    { "nom": "animal", "gen": "animalis", "geslacht": "o", "type": "subs", "vert": ["levend wezen", "dier"] }
 ]
