@@ -27,4 +27,8 @@ export default class Subs extends Woord {
 
         form.appendChild(div);
     }
+
+    findIn(list) {
+        return list.find(elt => elt.nom == this.nom);
+    }
 }

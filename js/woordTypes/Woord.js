@@ -14,4 +14,8 @@ export default class Woord {
     createHTML() {
         console.warn('unhandled createHTML call at', this.type);
     }
+
+    findIn(list) {
+        return false;
+    }
 }

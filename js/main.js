@@ -1,14 +1,9 @@
 import loadWoorden from './loadWoorden.js';
+import createVue from './createVue.js';
 
 let app;
 
-loadWoorden(201)
+loadWoorden('aestus')
     .then(woorden => {
-        app = new Vue({
-            el: '.container',
-            data: {
-                woorden
-            }
-        });
-        window.app = app;
+        app = createVue(woorden, [], true);
     });

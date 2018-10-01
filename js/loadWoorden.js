@@ -34,8 +34,15 @@ function mapToType(list) {
     });
 }
 
+function getIndexes(list, nom1, nom2) {
+    const index1 = list.findIndex(woord => woord.nom == nom1) < 0 ? 0 : list.findIndex(woord => woord.nom == nom1);
+    const index2 = list.findIndex(woord => woord.nom == nom2) < 0 ? list.length : list.findIndex(woord => woord.nom == nom2);
+
+    return [list, index1, index2];
+}
+
 export default function loadWoorden(from, to) {
     return loadJSON('./woorden/woordjesLatijn.json')
-        .then(woorden => filterFromTo(woorden, from || 0, to || woorden.length))
+        .then(woorden => filterFromTo(...getIndexes(woorden, from, to)))
         .then(woorden => mapToType(woorden));
 }
