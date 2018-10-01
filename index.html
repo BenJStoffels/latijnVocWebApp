@@ -9,19 +9,27 @@
 </head>
 
 <body>
-    <div class="woordenContainer" v-if="showing">
-        <h1>Latijn Voc.</h1>
+    <div class="mainApp">
+        <div class="woordenContainer" v-if="showingMain">
+            <h1 v-on:click="loadLearnForm()">Latijn Voc.</h1>
 
-        <label class="switch" v-on:click="changeCurrentWords(this)">
-            <input type="checkbox">
-            <span class="slider round"></span>
-        </label>
-        <div class="woorden">
-            <div class="woord" v-for="woord in curwords" v-on:click="addToSelectedWords(woord)">
-                <span class="star" v-if="woord.findIn(selected)">&#9873;</span>
-                <span class="star" v-else>&#9872;</span>
-                <div class="woordcontent" v-html="woord.display()"></div>
+            <label class="switch" v-on:click="changeCurrentWords(this)">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <div class="woorden">
+                <div class="woord" v-for="woord in curwords" v-on:click="addToSelectedWords(woord)">
+                    <span class="star" v-if="woord.findIn(selected)">&#9873;</span>
+                    <span class="star" v-else>&#9872;</span>
+                    <div class="woordcontent" v-html="woord.display()"></div>
+                </div>
             </div>
+        </div>
+        <div class="learnContainer" v-if="showingLearn">
+            <form v-on:submit.prevent="submitLearnForm">
+                <div class="woordForm" v-html="currentWord.createHTML()"></div>
+                <input type="submit" value="submit">
+            </form>
         </div>
     </div>
     <script src="./js/main.js" type="module"></script>

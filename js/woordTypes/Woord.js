@@ -18,4 +18,8 @@ export default class Woord {
     findIn(list) {
         return false;
     }
+
+    parseFromForm(form) {
+        console.warn('unhandled parse call!');
+    }
 }

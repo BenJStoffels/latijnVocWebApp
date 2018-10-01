@@ -1,11 +1,13 @@
-export default function createVue(main, selected, showing) {
+export default function createVue(main, selected) {
     return new Vue({
-        el: '.woordenContainer',
+        el: '.mainApp',
         data: {
             main,
-            showing,
+            showingMain: true,
+            showingLearn: false,
             curwords: main,
-            selected
+            selected,
+            currentWord: null
         },
         methods: {
             addToSelectedWords(woord) {
@@ -23,6 +25,20 @@ export default function createVue(main, selected, showing) {
                     this.curwords = this.main;
                     checkedtoggle.checked = false;
                 }
+            },
+            loadLearnForm() {
+                this.currentWord = this.curwords.splice(Math.floor(Math.random() * this.curwords.length), 1)[0];
+                console.log(this.currentWord);
+                this.showingMain = false;
+                this.showingLearn = true;
+            },
+            submitLearnForm() {
+                const form = document.querySelector('form');
+
+                const data = this.currentWord.parseFromForm(form);
+                console.log(data);
+                const correct = this.currentWord.check(data);
+                console.log(correct);
             }
         }
     });

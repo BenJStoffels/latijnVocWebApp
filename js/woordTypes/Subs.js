@@ -13,22 +13,24 @@ export default class Subs extends Woord {
         return `<p>${this.nom}, ${this.gen}: ${this.vert.join(', ')} (${this.geslacht})</p>`;
     }
 
-    check({ gen, vert, geslacht }) {}
+    check({ gen, vert, geslacht }) {
+        return gen == this.gen && this.vert.find(v => v == vert) && this.geslacht == geslacht;
+    }
 
     createHTML(form) {
-        const div = document.createElement('div');
-        div.className = 'woordForm';
-        div.innerHTML = `<span>${this.nom}, </span>
-        <input type="text" name=${this.gen}>
-        <input type="text" name=${this.vert[0]}>
-        <input type="radio" name=${this.nom}> m
-        <input type="radio" name=${this.nom}> v
-        <input type="radio" name=${this.nom}> 0`;
-
-        form.appendChild(div);
+        return `<span>${this.nom}, </span>
+        <input type="text" name="${this.gen} (gen)">
+        <input type="text" name="${this.vert[0]} (vert)">
+        <input type="radio"  value="m" name="${this.nom} (geslacht)"> m
+        <input type="radio" value="v" name="${this.nom} (geslacht)"> v
+        <input type="radio" value="o" name="${this.nom} (geslacht)"> o`;
     }
 
     findIn(list) {
         return list.find(elt => elt.nom == this.nom);
+    }
+
+    parseFromForm(form) {
+        return { nom: this.nom, gen: form[`${this.gen} (gen)`].value, vert: form[`${this.vert[0]} (vert)`].value, geslacht: form[`${this.nom} (geslacht)`].value }
     }
 }
