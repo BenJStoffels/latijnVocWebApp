@@ -1,7 +1,7 @@
 .woordenContainer {
     width: 80vw;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    color: rgb(31, 18, 2);
+    color: rgb(51, 29, 2);
     margin: auto;
     text-align: center;
 }
@@ -10,7 +10,7 @@
     text-align: left;
     padding-left: 10px;
     position: relative;
-    border: 1px solid rgb(31, 18, 2);
+    border: 1px solid rgb(51, 29, 2);
     border-radius: 5px;
     margin: 5px;
 }
@@ -62,11 +62,11 @@
 }
 
 input:checked+.slider {
-    background-color: rgb(31, 18, 2);
+    background-color: rgb(51, 29, 2);
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px rgb(31, 18, 2);
+    box-shadow: 0 0 1px rgb(51, 29, 2);
 }
 
 input:checked+.slider:before {

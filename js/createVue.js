@@ -4,17 +4,24 @@ export default function createVue(main, selected, showing) {
         data: {
             main,
             showing,
-            curwoorden: main,
+            curwords: main,
             selected
         },
         methods: {
             addToSelectedWords(woord) {
-                if (woord.findIn(selected)) {
-                    selected.splice(selected.findIndex(elt => elt.nom == woord.nom));
-                    console.log(selected, woord);
+                if (woord.findIn(this.selected)) {
+                    this.selected.splice(selected.findIndex(elt => elt.nom == woord.nom), 1);
                 } else {
-                    selected.push(woord);
-                    console.log(selected, woord);
+                    this.selected.push(woord);
+                }
+            },
+            changeCurrentWords() {
+                const checkedtoggle = document.querySelector('label.switch').querySelector('input')
+                if (checkedtoggle.checked && this.selected.length != 0) {
+                    this.curwords = this.selected;
+                } else {
+                    this.curwords = this.main;
+                    checkedtoggle.checked = false;
                 }
             }
         }

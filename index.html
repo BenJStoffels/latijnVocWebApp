@@ -12,13 +12,12 @@
     <div class="woordenContainer" v-if="showing">
         <h1>Latijn Voc.</h1>
 
-        <!-- add an v-on:click method -->
-        <label class="switch">
+        <label class="switch" v-on:click="changeCurrentWords(this)">
             <input type="checkbox">
             <span class="slider round"></span>
         </label>
         <div class="woorden">
-            <div class="woord" v-for="woord in main" v-on:click="addToSelectedWords(woord)">
+            <div class="woord" v-for="woord in curwords" v-on:click="addToSelectedWords(woord)">
                 <span class="star" v-if="woord.findIn(selected)">&#9873;</span>
                 <span class="star" v-else>&#9872;</span>
                 <div class="woordcontent" v-html="woord.display()"></div>
