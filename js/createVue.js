@@ -30,6 +30,15 @@ export default function createVue(main, selected) {
                     checkedtoggle.checked = false;
                 }
             },
+            loadScene(name) {
+                if (name == 'main') {
+                    this.curwords = this.main;
+                    this.showingMain = true;
+                    this.showingLearn = false;
+                } else if (name == 'learn') {
+                    this.loadLearnForm();
+                }
+            },
             loadLearnForm() {
                 this.response.class = 'hiding';
                 this.response.innerHTML = '';

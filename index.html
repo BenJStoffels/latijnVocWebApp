@@ -10,9 +10,15 @@
 
 <body>
     <div class="mainApp">
+        <h1>Latijn</h1>
+        <div class="header">
+            <span class="letter" data-letter="W" v-on:click="loadScene('main')">Woorden</span>
+            <span class="letter" data-letter="L" v-on:click="loadScene('learn')">Learn</span>
+            <span class="letter" data-letter="T">Test</span>
+            <span class="letter" data-letter="V">Verbuiging</span>
+            <span class="letter" data-letter="W">Werkwoorden</span>
+        </div>
         <div class="woordenContainer" v-if="showingMain">
-            <h1 v-on:click="loadLearnForm()">Latijn Voc.</h1>
-
             <label class="switch" v-on:click="changeCurrentWords(this)">
                 <input type="checkbox">
                 <span class="slider round"></span>
