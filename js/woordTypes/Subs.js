@@ -17,10 +17,10 @@ export default class Subs extends Woord {
         return gen == this.gen && this.vert.find(v => v == vert) && this.geslacht == geslacht;
     }
 
-    createHTML(form) {
+    createHTML() {
         return `<span>${this.nom}, </span>
-        <input type="text" name="${this.gen} (gen)">
-        <input type="text" name="${this.vert[0]} (vert)">
+        <input type="text" autocomplete="off" name="${this.gen} (gen)">
+        <input type="text" autocomplete="off" name="${this.vert[0]} (vert)">
         <input type="radio"  value="m" name="${this.nom} (geslacht)"> m
         <input type="radio" value="v" name="${this.nom} (geslacht)"> v
         <input type="radio" value="o" name="${this.nom} (geslacht)"> o`;

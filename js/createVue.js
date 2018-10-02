@@ -7,7 +7,11 @@ export default function createVue(main, selected) {
             showingLearn: false,
             curwords: main,
             selected,
-            currentWord: null
+            currentWord: null,
+            response: {
+                class: 'hiding',
+                innerHTML: ''
+            }
         },
         methods: {
             addToSelectedWords(woord) {
@@ -27,6 +31,8 @@ export default function createVue(main, selected) {
                 }
             },
             loadLearnForm() {
+                this.response.class = 'hiding';
+                this.response.innerHTML = '';
                 this.currentWord = this.curwords.splice(Math.floor(Math.random() * this.curwords.length), 1)[0];
                 console.log(this.currentWord);
                 this.showingMain = false;
@@ -38,7 +44,10 @@ export default function createVue(main, selected) {
                 const data = this.currentWord.parseFromForm(form);
                 console.log(data);
                 const correct = this.currentWord.check(data);
-                console.log(correct);
+                this.response.class = correct ? 'good' : 'wrong';
+                this.response.innerHTML = this.currentWord.display();
+
+                setTimeout(this.loadLearnForm, 2500);
             }
         }
     });

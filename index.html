@@ -30,6 +30,7 @@
                 <div class="woordForm" v-html="currentWord.createHTML()"></div>
                 <input type="submit" value="submit">
             </form>
+            <div id="response" :class="response.class" v-html="response.innerHTML"></div>
         </div>
     </div>
     <script src="./js/main.js" type="module"></script>
