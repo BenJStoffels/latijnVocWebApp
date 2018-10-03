@@ -3,7 +3,7 @@
 
 <head>
     <title>Latijn voc</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="shortcut icon" type="image/png" href="./static/imgs/favicon.png" />
     <link rel="stylesheet" href="./static/style.css">
 </head>
@@ -18,25 +18,25 @@
             <span class="letter" data-letter="V">Verbuiging</span>
             <span class="letter" data-letter="W">Werkwoorden</span>
         </div>
-        <div class="woordenContainer" v-if="showingMain">
+        <div class="woordenContainer" v-if="showing.main">
             <label class="switch" v-on:click="changeCurrentWords(this)">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
             <div class="woorden">
                 <div class="woord" v-for="woord in curwords" v-on:click="addToSelectedWords(woord)">
-                    <span class="star" v-if="woord.findIn(selected)">&#9873;</span>
+                    <span class="star" v-if="woord.findIn(mainWindow.selected)">&#9873;</span>
                     <span class="star" v-else>&#9872;</span>
                     <div class="woordcontent" v-html="woord.display()"></div>
                 </div>
             </div>
         </div>
-        <div class="learnContainer" v-if="showingLearn">
+        <div class="learnContainer" v-if="showing.learn">
             <form v-on:submit.prevent="submitLearnForm">
-                <div class="woordForm" v-html="currentWord.createHTML()"></div>
+                <div class="woordForm" v-html="learnWindow.currentWord.createHTML()"></div>
                 <input type="submit" value="submit">
             </form>
-            <div id="response" :class="response.class" v-html="response.innerHTML"></div>
+            <div id="response" :class="learnWindow.response.class" v-html="learnWindow.response.innerHTML"></div>
         </div>
     </div>
     <script src="./js/main.js" type="module"></script>

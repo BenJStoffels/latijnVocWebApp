@@ -19,15 +19,19 @@ export default class Subs extends Woord {
 
     createHTML() {
         return `<span>${this.nom}, </span>
-        <input type="text" autocomplete="off" name="${this.gen} (gen)">
+        <input type="text" autocomplete="off" name="${this.gen} (gen)">: 
         <input type="text" autocomplete="off" name="${this.vert[0]} (vert)">
-        <input type="radio"  value="m" name="${this.nom} (geslacht)"> m
+        <input type="radio"  value="m" name="${this.nom} (geslacht)" checked> m
         <input type="radio" value="v" name="${this.nom} (geslacht)"> v
         <input type="radio" value="o" name="${this.nom} (geslacht)"> o`;
     }
 
     findIn(list) {
         return list.find(elt => elt.nom == this.nom);
+    }
+
+    findIndex(list) {
+        return list.findIndex(elt => elt.nom == this.nom);
     }
 
     parseFromForm(form) {
