@@ -43,7 +43,6 @@ export default function createVue(main, selected) {
                 this.response.class = 'hiding';
                 this.response.innerHTML = '';
                 this.currentWord = this.curwords.splice(Math.floor(Math.random() * this.curwords.length), 1)[0];
-                console.log(this.currentWord);
                 this.showingMain = false;
                 this.showingLearn = true;
             },
@@ -51,9 +50,8 @@ export default function createVue(main, selected) {
                 const form = document.querySelector('form');
 
                 const data = this.currentWord.parseFromForm(form);
-                console.log(data);
                 const correct = this.currentWord.check(data);
-                this.response.class = correct ? 'good' : 'wrong';
+                this.response.class = correct ? 'correct' : 'wrong';
                 this.response.innerHTML = this.currentWord.display();
 
                 setTimeout(this.loadLearnForm, 2500);
