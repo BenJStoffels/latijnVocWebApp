@@ -38,6 +38,11 @@
 
 .learnContainer form input[type='submit']:hover {
     background-color: rgb(37, 22, 2);
+    cursor: pointer;
+}
+
+small:hover {
+    cursor: pointer;
 }
 
 .learnContainer form input[type='submit']:focus {

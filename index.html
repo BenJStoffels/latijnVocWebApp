@@ -9,11 +9,12 @@
 </head>
 
 <body>
+    <script src="./js/main.js" type="module"></script>
     <div class="mainApp">
         <h1>Latijn</h1>
         <div class="header">
             <span class="letter" data-letter="W" v-on:click="loadScene('main')">Woorden</span>
-            <span class="letter" data-letter="L" v-on:click="loadScene('learn')">Learn</span>
+            <span class="letter" data-letter="L" v-on:click="loadScene('learn')">Leer</span>
             <span class="letter" data-letter="T">Test</span>
             <span class="letter" data-letter="V">Verbuiging</span>
             <span class="letter" data-letter="W">Werkwoorden</span>
@@ -30,6 +31,9 @@
                     <div class="woordcontent" v-html="woord.display()"></div>
                 </div>
             </div>
+            <footer>
+                <small onclick="loadOtherWords(prompt('van?'), prompt('tot?'))">leer andere woorden</small>
+            </footer>
         </div>
         <div class="learnContainer" v-if="showing.learn">
             <form v-on:submit.prevent="submitLearnForm">
@@ -39,7 +43,6 @@
             <div id="response" :class="learnWindow.response.class" v-html="learnWindow.response.innerHTML"></div>
         </div>
     </div>
-    <script src="./js/main.js" type="module"></script>
 </body>
 
 </html>

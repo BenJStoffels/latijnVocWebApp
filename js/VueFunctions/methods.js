@@ -36,15 +36,17 @@ export function loadScene(name) {
     this.showing[name] = true;
 }
 
-export function reset() {
+export function reset(change) {
     this.learnWindow.response.class = 'hiding';
     this.learnWindow.response.innerHTML = '';
     if (this.curwords.length == 0) {
         this.loadScene('main');
         return;
     }
-    this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
-    this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
+    if (change) {
+        this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
+        this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
+    }
 }
 
 export function submitLearnForm() {
@@ -58,5 +60,5 @@ export function submitLearnForm() {
     }
     this.learnWindow.response.innerHTML = this.learnWindow.currentWord.display();
 
-    setTimeout(this.reset, 2500);
+    setTimeout(this.reset, 2500, correct);
 }
