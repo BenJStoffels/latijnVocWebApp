@@ -13,32 +13,31 @@
     <div class="mainApp">
         <h1>Latijn</h1>
         <div class="header">
-            <span class="letter" data-letter="W" v-on:click="loadScene('main')">Woorden</span>
-            <span class="letter" data-letter="L" v-on:click="loadScene('learn')">Leer</span>
-            <span class="letter" data-letter="T">Test</span>
-            <span class="letter" data-letter="V">Verbuiging</span>
-            <span class="letter" data-letter="W">Werkwoorden</span>
+            <span class="letter clickable" data-letter="W" v-on:click="loadScene('main')">Woorden</span>
+            <span class="letter clickable" data-letter="L" v-on:click="loadScene('learn')">Leer</span>
+            <span class="letter NotFinished" data-letter="T">Test</span>
+            <span class="letter NotFinished" data-letter="V">Verbuiging</span>
+            <span class="letter NotFinished" data-letter="W">Werkwoorden</span>
         </div>
         <div class="woordenContainer" v-if="showing.main">
-            <label class="switch" v-on:click="changeCurrentWords(this)">
+            <label class="switch clickable" v-on:click="changeCurrentWords(this)">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
+            <br>
+            <small class="clickable" onclick="loadOtherWords(prompt('van ?'), prompt('tot ?'))">leer andere woorden</small>
             <div class="woorden">
-                <div class="woord" v-for="woord in curwords" v-on:click="addToSelectedWords(woord)">
+                <div class="woord clickable" v-for="woord in curwords" v-on:click="addToSelectedWords(woord)">
                     <span class="star" v-if="woord.findIn(mainWindow.selected)">&#9873;</span>
                     <span class="star" v-else>&#9872;</span>
                     <div class="woordcontent" v-html="woord.display()"></div>
                 </div>
             </div>
-            <footer>
-                <small onclick="loadOtherWords(prompt('van?'), prompt('tot?'))">leer andere woorden</small>
-            </footer>
         </div>
         <div class="learnContainer" v-if="showing.learn">
             <form v-on:submit.prevent="submitLearnForm">
                 <div class="woordForm" v-html="learnWindow.currentWord.createHTML()"></div>
-                <input type="submit" value="submit">
+                <input class="clickable" type="submit" value="submit">
             </form>
             <div id="response" :class="learnWindow.response.class" v-html="learnWindow.response.innerHTML"></div>
         </div>

@@ -1,6 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:900);
 
 
+.clickable:hover {
+    cursor: pointer;
+}
+
+.NotFinished:hover {
+    cursor: not-allowed;
+}
+
 .woordenContainer {
     width: 80vw;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -38,11 +46,6 @@
 
 .learnContainer form input[type='submit']:hover {
     background-color: rgb(37, 22, 2);
-    cursor: pointer;
-}
-
-small:hover {
-    cursor: pointer;
 }
 
 .learnContainer form input[type='submit']:focus {
@@ -106,7 +109,6 @@ small:hover {
 /* The slider */
 .slider {
     position: absolute;
-    cursor: pointer;
     top: 0;
     left: 0;
     right: 0;
