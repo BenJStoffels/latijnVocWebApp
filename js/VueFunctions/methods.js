@@ -24,7 +24,7 @@ const sceneMethods = {
         this.learnWindow.response.class = 'hiding';
         this.learnWindow.response.innerHTML = '';
         this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
-        this.learnWindow.currentWord = this.curwords.splice(this.learnWindow.currentIndex, 1)[0];
+        this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
     }
 };
 
@@ -36,17 +36,15 @@ export function loadScene(name) {
     this.showing[name] = true;
 }
 
-export function reset(change) {
+export function reset() {
     this.learnWindow.response.class = 'hiding';
     this.learnWindow.response.innerHTML = '';
     if (this.curwords.length == 0) {
         this.loadScene('main');
         return;
     }
-    if (change) {
-        this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
-        this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
-    }
+    this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
+    this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
 }
 
 export function submitLearnForm() {

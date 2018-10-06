@@ -35,7 +35,7 @@
             </div>
         </div>
         <div class="learnContainer" v-if="showing.learn">
-            <form v-on:submit.prevent="submitLearnForm">
+            <form v-on:submit.prevent="submitLearnForm()">
                 <div class="woordForm" v-html="learnWindow.currentWord.createHTML()"></div>
                 <input class="clickable" type="submit" value="submit">
             </form>

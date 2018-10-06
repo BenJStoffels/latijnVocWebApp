@@ -5,6 +5,7 @@ export default class Woord {
 
     check() {
         console.warn('unhandled check call at', this.type);
+        return false;
     }
 
     display() {
@@ -13,6 +14,7 @@ export default class Woord {
 
     createHTML() {
         console.warn('unhandled createHTML call at', this.type);
+        return `<p>error</p>`
     }
 
     findIn(list) {
@@ -21,5 +23,10 @@ export default class Woord {
 
     parseFromForm(form) {
         console.warn('unhandled parse call!');
+        return {};
+    }
+
+    isEqual() {
+        return false;
     }
 }

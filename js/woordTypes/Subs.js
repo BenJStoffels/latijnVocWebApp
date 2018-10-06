@@ -19,8 +19,8 @@ export default class Subs extends Woord {
 
     createHTML() {
         return `<span>${this.nom}, </span>
-        <input type="text" autocomplete="off" name="${this.gen} (gen)">: 
-        <input type="text" autocomplete="off" name="${this.vert[0]} (vert)">
+        <input type="text" autocomplete="off" spellcheck="false" name="${this.gen} (gen)">: 
+        <input type="text" autocomplete="off" spellcheck="false" name="${this.vert[0]} (vert)">
         <input type="radio"  value="m" name="${this.nom} (geslacht)" checked> m
         <input type="radio" value="v" name="${this.nom} (geslacht)"> v
         <input type="radio" value="o" name="${this.nom} (geslacht)"> o`;
@@ -35,6 +35,14 @@ export default class Subs extends Woord {
     }
 
     parseFromForm(form) {
-        return { nom: this.nom, gen: form[`${this.gen} (gen)`].value, vert: form[`${this.vert[0]} (vert)`].value, geslacht: form[`${this.nom} (geslacht)`].value }
+        const data = { nom: this.nom, gen: form[`${this.gen} (gen)`].value, vert: form[`${this.vert[0]} (vert)`].value, geslacht: form[`${this.nom} (geslacht)`].value };
+        form[`${this.gen} (gen)`].value = '';
+        form[`${this.vert[0]} (vert)`].value = '';
+        form[`${this.nom} (geslacht)`].value = 'm';
+        return data;
+    }
+
+    isEqual(nom) {
+        return this.nom == nom;
     }
 }

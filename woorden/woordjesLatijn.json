@@ -220,5 +220,6 @@
     { "nom": "fides", "gen": "fidei", "geslacht": "v", "vert": ["vertrouwen", "trouw", "eerlijkheid"], "type": "subs" },
     { "nom": "res", "gen": "rei", "geslacht": "v", "vert": ["zaak", "ding", "voorwerp", "aangelegenheid"], "type": "subs" },
     { "nom": "res publica", "gen": "rei publicae", "geslacht": "v", "vert": ["aanblik", "uiterlijk", "voorkomen"], "type": "subs" },
-    { "nom": "spes", "gen": "spei", "geslacht": "v", "vert": ["hoop", "verwachting"], "type": "subs" }
+    { "nom": "spes", "gen": "spei", "geslacht": "v", "vert": ["hoop", "verwachting"], "type": "subs" },
+    { "man": "bonus", "vr": "bona", "onz": "bonum", "vert": ["goed", "slecht"], "type": "adj" }
 ]
