@@ -3,7 +3,7 @@ import createVue from './createVue.js';
 
 let app;
 
-loadWoorden('aestus')
+loadWoorden('adversus', 'princeps')
     .then(woorden => {
         app = createVue(woorden, [], true);
     });
