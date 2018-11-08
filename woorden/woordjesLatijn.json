@@ -220,5 +220,19 @@
     { "nom": "fides", "gen": "fidei", "geslacht": "v", "vert": ["vertrouwen", "trouw", "eerlijkheid"], "type": "subs" },
     { "nom": "res", "gen": "rei", "geslacht": "v", "vert": ["zaak", "ding", "voorwerp", "aangelegenheid"], "type": "subs" },
     { "nom": "res publica", "gen": "rei publicae", "geslacht": "v", "vert": ["aanblik", "uiterlijk", "voorkomen"], "type": "subs" },
-    { "nom": "spes", "gen": "spei", "geslacht": "v", "vert": ["hoop", "verwachting"], "type": "subs" }
+    { "nom": "spes", "gen": "spei", "geslacht": "v", "vert": ["hoop", "verwachting"], "type": "subs" },
+    { "man": "adversus", "vr": "adversa", "onz": "adversum", "vert": ["tegenoverstaand", "ongunstig"], "type": "adj" },
+    { "man": "aequus", "vr": "aequa", "onz": "aequum", "vert": ["effen", "vlak", "gelijk", "gelijkmatig", "rechtvaardig"], "type": "adj" },
+    { "man": "altus", "vr": "alta", "onz": "altum", "vert": ["hoog", "diep"], "type": "adj" },
+    { "man": "bonus", "vr": "bona", "onz": "bonum", "vert": ["goed"], "type": "adj" },
+    { "man": "caecus", "vr": "caeca", "onz": "caecum", "vert": ["verblind", "blind", "onzichtbaar", "verborgen", "donker", "duister"], "type": "adj" },
+    { "man": "certus", "vr": "certa", "onz": "certum", "vert": ["zeker", "vast", "vastgesteld", "bepaald"], "type": "adj" },
+    { "man": "ceterus", "vr": "cetera", "onz": "ceterum", "vert": ["overig", "ander"], "type": "adj" },
+    { "man": "dignus", "vr": "digna", "onz": "dignum", "vert": ["waardig", "waard"], "type": "adj" },
+    { "man": "diversus", "vr": "diversa", "onz": "diversum", "vert": ["tegenovergesteld", "verschillend"], "type": "adj" },
+    { "man": "divus", "vr": "diva", "onz": "divum", "vert": ["goddelijk"], "type": "adj" },
+    { "man": "dubius", "vr": "dubia", "onz": "dubium", "vert": ["twijfelend", "onzeker", "twijfelachtig"], "type": "adj" },
+    { "man": "durus", "vr": "dura", "onz": "durum", "vert": ["hard", "wreed", "streng"], "type": "adj" },
+    { "man": "falsus", "vr": "falsa", "onz": "falsum", "vert": ["vals", "onwaar", "onecht", "bedrieglijk", "misleidend"], "type": "adj" },
+    { "man": "fessus", "vr": "fessa", "onz": "fessum", "vert": ["moe", "uitgeput", "afgemat"], "type": "adj" }
 ]
