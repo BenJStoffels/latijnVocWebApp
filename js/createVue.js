@@ -3,10 +3,11 @@ import {
     changeCurrentWords,
     loadScene,
     reset,
-    submitLearnForm
+    submitLearnForm,
+    getNewVerb
 } from './VueFunctions/methods.js';
 
-export default function createVue(main, selected, verbuigingen) {
+export default function createVue(main, selected, verbuigingen, curverb) {
     return new Vue({
         el: '.mainApp',
         data: {
@@ -28,7 +29,8 @@ export default function createVue(main, selected, verbuigingen) {
                 }
             },
             verbuigingWindow: {
-                verbuigingen
+                verbuigingen,
+                curverb
             },
             curwords: [...main]
         },
@@ -37,7 +39,8 @@ export default function createVue(main, selected, verbuigingen) {
             changeCurrentWords,
             loadScene,
             reset,
-            submitLearnForm
+            submitLearnForm,
+            getNewVerb
         }
     });
 }

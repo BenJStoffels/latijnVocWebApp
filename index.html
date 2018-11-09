@@ -20,7 +20,7 @@
             <span class="letter NotFinished" data-letter="W">Werkwoorden</span>
         </div>
         <div class="woordenContainer" v-if="showing.main">
-            <label class="switch clickable" v-on:click="changeCurrentWords(this)">
+            <label class="switch clickable" v-on:click="changeCurrentWords()">
                 <input type="checkbox">
                 <span class="slider round"></span>
             </label>
@@ -42,7 +42,19 @@
             <div id="response" :class="learnWindow.response.class" v-html="learnWindow.response.innerHTML"></div>
         </div>
         <div class="verbuigingContainer" v-if="showing.verbuiging">
-            currently working on it!!!
+            <input type="text" name="verb" id="verb" @keyup.enter="getNewVerb"><label for="verb">verbuiging</label>
+            <div class="verbuiging">
+                <ul>
+                    <li v-for="key in Object.keys(verbuigingWindow.curverb['verbuiging'])">
+                        <div class="back">
+                            {{ key }}
+                        </div>
+                        <div class="front">
+                            {{ key }}
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>

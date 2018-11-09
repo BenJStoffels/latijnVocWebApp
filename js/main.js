@@ -9,7 +9,7 @@ Promise.all([
     ])
     .then(([woorden, verbuigingen]) => {
         console.log(verbuigingen);
-        app = createVue(woorden, [], verbuigingen);
+        app = createVue(woorden, [], verbuigingen, verbuigingen[0]);
     });
 
 function loadOtherWords(from, to) {

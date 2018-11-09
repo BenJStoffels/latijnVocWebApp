@@ -63,3 +63,7 @@ export function submitLearnForm() {
 
     setTimeout(this.reset, 2500, correct);
 }
+
+export function getNewVerb() {
+    console.log(document.querySelector('input#verb').value);
+}

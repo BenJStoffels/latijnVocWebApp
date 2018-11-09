@@ -1,19 +1,46 @@
 [{
-        "name": "o-verb man",
-        "data": [
-            "alles", "nog meer"
-        ]
-    },
-    {
-        "name": "o-verb onz",
-        "data": [
-            "alles", "nog meer"
-        ]
-    },
-    {
-        "name": "a-verb vr",
-        "data": [
-            "alles", "nog meer"
-        ]
+    "name": "o-verb man",
+    "voorbeeldwoord": "ludus",
+    "verbuiging": {
+        "nom enk m": "ludus",
+        "acc enk m": "ludum",
+        "gen enk m": "ludi",
+        "dat enk m": "ludo",
+        "abl enk m": "ludo",
+        "nom mv m": "ludi",
+        "acc mv m": "ludos",
+        "gen mv m": "ludorum",
+        "dat mv m": "ludis",
+        "abl mv m": "ludis"
     }
-]
+}, {
+    "name": "o-verb onz",
+    "voorbeeldwoord": "signum",
+    "verbuiging": {
+        "nom enk m": "signum",
+        "acc enk m": "signum",
+        "gen enk m": "signi",
+        "dat enk m": "signo",
+        "abl enk m": "signo",
+        "nom mv m": "signa",
+        "acc mv m": "signa",
+        "gen mv m": "signorum",
+        "dat mv m": "signis",
+        "abl mv m": "signis"
+    }
+}, {
+    "name": "a-verb vr",
+    "voorbeeldwoord": "lingua",
+    "verbuiging": {
+        "nom enk m": "lingua",
+        "acc enk m": "linguam",
+        "gen enk m": "linguae",
+        "dat enk m": "linguae",
+        "abl enk m": "lingua",
+        "nom mv m": "linguae",
+        "acc mv m": "linguas",
+        "gen mv m": "linguarum",
+        "dat mv m": "linguis",
+        "abl mv m": "linguis"
+    }
+}]
