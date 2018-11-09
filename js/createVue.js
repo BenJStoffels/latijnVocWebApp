@@ -6,13 +6,14 @@ import {
     submitLearnForm
 } from './VueFunctions/methods.js';
 
-export default function createVue(main, selected) {
+export default function createVue(main, selected, verbuigingen) {
     return new Vue({
         el: '.mainApp',
         data: {
             showing: {
                 main: true,
-                learn: false
+                learn: false,
+                verbuiging: false
             },
             mainWindow: {
                 main,
@@ -25,6 +26,9 @@ export default function createVue(main, selected) {
                     class: 'hiding',
                     innerHTML: ''
                 }
+            },
+            verbuigingWindow: {
+                verbuigingen
             },
             curwords: [...main]
         },

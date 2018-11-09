@@ -1,11 +1,15 @@
 import loadWoorden from './loadWoorden.js';
+import loadVerbuigingen from './loadVerbuigingen.js';
 import createVue from './createVue.js';
 
 let app;
-
-loadWoorden('adversus', 'princeps')
-    .then(woorden => {
-        app = createVue(woorden, [], true);
+Promise.all([
+        loadWoorden('adversus', 'princeps'),
+        loadVerbuigingen('latijnVerb')
+    ])
+    .then(([woorden, verbuigingen]) => {
+        console.log(verbuigingen);
+        app = createVue(woorden, [], verbuigingen);
     });
 
 function loadOtherWords(from, to) {

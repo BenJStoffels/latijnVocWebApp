@@ -16,7 +16,7 @@
             <span class="letter clickable" data-letter="W" v-on:click="loadScene('main')">Woorden</span>
             <span class="letter clickable" data-letter="L" v-on:click="loadScene('learn')">Leer</span>
             <span class="letter NotFinished" data-letter="T">Test</span>
-            <span class="letter NotFinished" data-letter="V">Verbuiging</span>
+            <span class="letter clickable" data-letter="V" v-on:click="loadScene('verbuiging')">Verbuiging</span>
             <span class="letter NotFinished" data-letter="W">Werkwoorden</span>
         </div>
         <div class="woordenContainer" v-if="showing.main">
@@ -40,6 +40,9 @@
                 <input class="clickable" type="submit" value="submit">
             </form>
             <div id="response" :class="learnWindow.response.class" v-html="learnWindow.response.innerHTML"></div>
+        </div>
+        <div class="verbuigingContainer" v-if="showing.verbuiging">
+            currently working on it!!!
         </div>
     </div>
 </body>

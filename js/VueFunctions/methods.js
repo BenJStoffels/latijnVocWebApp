@@ -25,6 +25,9 @@ const sceneMethods = {
         this.learnWindow.response.innerHTML = '';
         this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
         this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
+    },
+    verbuiging() {
+        console.log(this.verbuigingWindow.verbuigingen);
     }
 };
 
