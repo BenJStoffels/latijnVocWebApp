@@ -44,10 +44,10 @@
         <div class="verbuigingContainer" v-if="showing.verbuiging">
             <input type="text" name="verb" id="verb" @keyup.enter="getNewVerb"><label for="verb">verbuiging</label>
             <div class="verbuiging">
-                <ul>
-                    <li v-for="key in Object.keys(verbuigingWindow.curverb['verbuiging'])">
+                <ul class="all_items">
+                    <li class="list-item" v-for="key in Object.keys(verbuigingWindow.curverb['verbuiging'])">
                         <div class="back">
-                            {{ key }}
+                            {{ verbuigingWindow.curverb.verbuiging[key] }}
                         </div>
                         <div class="front">
                             {{ key }}

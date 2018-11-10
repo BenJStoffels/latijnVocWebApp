@@ -8,7 +8,6 @@ Promise.all([
         loadVerbuigingen('latijnVerb')
     ])
     .then(([woorden, verbuigingen]) => {
-        console.log(verbuigingen);
         app = createVue(woorden, [], verbuigingen, verbuigingen[0]);
     });
 

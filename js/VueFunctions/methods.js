@@ -27,7 +27,7 @@ const sceneMethods = {
         this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
     },
     verbuiging() {
-        console.log(this.verbuigingWindow.verbuigingen);
+
     }
 };
 
@@ -65,5 +65,9 @@ export function submitLearnForm() {
 }
 
 export function getNewVerb() {
-    console.log(document.querySelector('input#verb').value);
+    const input = document.querySelector('input#verb').value || 'o-verb man';
+    const newVerbs = [...this.verbuigingWindow.verbuigingen].filter(verb => verb.name == input);
+    if (newVerbs.length > 0) {
+        this.verbuigingWindow.curverb = newVerbs[0];
+    }
 }
