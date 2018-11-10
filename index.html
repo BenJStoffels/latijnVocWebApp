@@ -42,7 +42,7 @@
             <div id="response" :class="learnWindow.response.class" v-html="learnWindow.response.innerHTML"></div>
         </div>
         <div class="verbuigingContainer" v-if="showing.verbuiging">
-            <input type="text" name="verb" id="verb" @keyup.enter="getNewVerb"><label for="verb">verbuiging</label>
+            <input type="text" name="verb" id="verb" autocomplete="off" spellcheck="false" @keyup.enter="getNewVerb"><label for="verb">verbuiging</label>
             <div class="verbuiging">
                 <ul class="all_items">
                     <li class="list-item" v-for="key in Object.keys(verbuigingWindow.curverb['verbuiging'])">
@@ -50,7 +50,9 @@
                             {{ verbuigingWindow.curverb.verbuiging[key] }}
                         </div>
                         <div class="front">
-                            {{ key }}
+                            <h3>{{ verbuigingWindow.curverb.name }}</h3>
+                            <p>{{ key }}</p>
+                            <small>volgens: {{ verbuigingWindow.curverb.voorbeeldwoord }}</small>
                         </div>
                     </li>
                 </ul>

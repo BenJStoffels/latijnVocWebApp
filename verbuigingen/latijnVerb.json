@@ -17,30 +17,30 @@
     "name": "o-verb onz",
     "voorbeeldwoord": "signum",
     "verbuiging": {
-        "nom enk m": "signum",
-        "acc enk m": "signum",
-        "gen enk m": "signi",
-        "dat enk m": "signo",
-        "abl enk m": "signo",
-        "nom mv m": "signa",
-        "acc mv m": "signa",
-        "gen mv m": "signorum",
-        "dat mv m": "signis",
-        "abl mv m": "signis"
+        "nom enk o": "signum",
+        "acc enk o": "signum",
+        "gen enk o": "signi",
+        "dat enk o": "signo",
+        "abl enk o": "signo",
+        "nom mv o": "signa",
+        "acc mv o": "signa",
+        "gen mv o": "signorum",
+        "dat mv o": "signis",
+        "abl mv o": "signis"
     }
 }, {
     "name": "a-verb vr",
     "voorbeeldwoord": "lingua",
     "verbuiging": {
-        "nom enk m": "lingua",
-        "acc enk m": "linguam",
-        "gen enk m": "linguae",
-        "dat enk m": "linguae",
-        "abl enk m": "lingua",
-        "nom mv m": "linguae",
-        "acc mv m": "linguas",
-        "gen mv m": "linguarum",
-        "dat mv m": "linguis",
-        "abl mv m": "linguis"
+        "nom enk vr": "lingua",
+        "acc enk vr": "linguam",
+        "gen enk vr": "linguae",
+        "dat enk vr": "linguae",
+        "abl enk vr": "lingua",
+        "nom mv vr": "linguae",
+        "acc mv vr": "linguas",
+        "gen mv vr": "linguarum",
+        "dat mv vr": "linguis",
+        "abl mv vr": "linguis"
     }
 }]
