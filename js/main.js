@@ -19,4 +19,13 @@ function loadOtherWords(from, to) {
         });
 }
 
+function rotate(elt) {
+    if (elt.className == "list-item rotate") {
+        elt.className = "list-item";
+    } else {
+        elt.className = "list-item rotate";
+    }
+}
+
+window.rotateElt = rotate;
 window.loadOtherWords = loadOtherWords;

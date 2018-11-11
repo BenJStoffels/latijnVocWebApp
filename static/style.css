@@ -301,6 +301,7 @@ div.header {
     height: 100%;
     line-height: 100%;
     font-size: 2em;
+    line-height: 100%;
     position: absolute;
     background: #210900;
     border-radius: 10px;

@@ -45,7 +45,7 @@
             <input type="text" name="verb" id="verb" autocomplete="off" spellcheck="false" @keyup.enter="getNewVerb"><label for="verb">verbuiging</label>
             <div class="verbuiging">
                 <ul class="all_items">
-                    <li class="list-item" v-for="key in Object.keys(verbuigingWindow.curverb['verbuiging'])">
+                    <li class="list-item" v-for="key in Object.keys(verbuigingWindow.curverb['verbuiging'])" onclick="rotateElt(this)">
                         <div class="back">
                             {{ verbuigingWindow.curverb.verbuiging[key] }}
                         </div>
