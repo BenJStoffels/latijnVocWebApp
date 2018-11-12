@@ -2,6 +2,8 @@ import loadWoorden from './loadWoorden.js';
 import loadVerbuigingen from './loadVerbuigingen.js';
 import createVue from './createVue.js';
 
+let scrollable, items, itemCount, offset;
+
 let app;
 Promise.all([
         loadWoorden('adversus', 'princeps'),

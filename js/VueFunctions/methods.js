@@ -19,21 +19,31 @@ export function addToSelectedWords(woord) {
 const sceneMethods = {
     main() {
         this.curwords = [...this.mainWindow.main];
+        return () => {};
     },
     learn() {
         this.learnWindow.response.class = 'hiding';
         this.learnWindow.response.innerHTML = '';
         this.learnWindow.currentIndex = Math.floor(Math.random() * this.curwords.length);
         this.learnWindow.currentWord = this.curwords[this.learnWindow.currentIndex];
+        return () => {};
     },
     verbuiging() {
+        const script = document.createElement('script');
+        script.src = './js/scrollBehaviour.js';
+        document.querySelector('.mainApp').appendChild(script);
 
+        return () => {
+            document.querySelector('.mainApp').removeChild(script);
+        }
     }
 };
 
 export function loadScene(name) {
 
-    sceneMethods[name].bind(this)();
+    this.breakOff();
+
+    this.breakOff = sceneMethods[name].bind(this)();
 
     Object.keys(this.showing).forEach(key => this.showing[key] = false);
     this.showing[name] = true;

@@ -1,7 +1,8 @@
-const scrollable = document.querySelector('.verbuiging');
-const items = document.querySelector('.all_items');
-const itemCount = items.children.length;
-const offset = window.innerWidth / 8;
+scrollable = document.querySelector('.verbuiging');
+items = document.querySelector('.all_items');
+itemCount = items.children.length;
+offset = items.clientWidth / 8;
+
 
 function scrollMiddleWare(inertia = 0.9) {
     const abs = {
@@ -34,8 +35,8 @@ function scrollMiddleWare(inertia = 0.9) {
 
         function notify() {
             abs.x += delta.x;
-            if (abs.x < (-window.innerWidth * itemCount / 4) + offset) {
-                abs.x = (-window.innerWidth * itemCount / 4) + offset;
+            if (abs.x < (-items.children[0].clientWidth * itemCount) + offset) {
+                abs.x = (-items.children[0].clientWidth * itemCount) + offset;
             }
             if (abs.x > offset) {
                 abs.x = offset;
@@ -58,6 +59,7 @@ function scrollMiddleWare(inertia = 0.9) {
         };
     };
 }
+
 scrollable.addEventListener('mousemove', scrollMiddleWare()(scroll => {
     items.style.left = `${scroll.abs.x}px`;
 }));

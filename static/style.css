@@ -263,6 +263,7 @@ div.header {
     perspective: 200vw;
     overflow: hidden;
     margin-top: 20px;
+    height: 50vh;
 }
 
 .verbuigingContainer .verbuiging .all_items {
@@ -299,9 +300,6 @@ div.header {
 .list-item .back {
     width: 100%;
     height: 100%;
-    line-height: 100%;
-    font-size: 2em;
-    line-height: 100%;
     position: absolute;
     background: #210900;
     border-radius: 10px;
@@ -312,6 +310,14 @@ div.header {
     text-align: center;
     padding: 10px;
     user-select: none;
+}
+
+.list-item .back p {
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    padding: 0;
 }
 
 .list-item.rotate .front {

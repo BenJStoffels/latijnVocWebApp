@@ -40,7 +40,8 @@ export default function createVue(main, selected, verbuigingen, curverb) {
             loadScene,
             reset,
             submitLearnForm,
-            getNewVerb
+            getNewVerb,
+            breakOff: () => {}
         }
     });
 }
