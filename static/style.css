@@ -327,3 +327,26 @@ div.header {
 .list-item.rotate .back {
     transform: rotateY(0deg);
 }
+
+.names {
+    position: relative;
+}
+
+.names title {
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+.names ul.verbuigingNames {
+    list-style-type: none;
+    display: inline;
+    font-size: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.names p {
+    margin: 5px 0;
+}

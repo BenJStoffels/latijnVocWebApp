@@ -56,6 +56,14 @@
                         </div>
                     </li>
                 </ul>
+                <div class="names">
+                    <h3>Namen van de verbuigingen</h3>
+                    <ul class="verbuigingNames">
+                        <li class="verbuigingName" v-for="verb in verbuigingWindow.verbuigingen">
+                            <p>{{ verb.name }}</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
